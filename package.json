@@ -28,6 +28,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@vercel/analytics": "^0.1.6",
 		"dropzone": "^6.0.0-beta.2",
 		"svelte-chartjs": "^3.1.0"
 	}

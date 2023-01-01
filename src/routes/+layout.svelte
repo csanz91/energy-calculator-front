@@ -1,5 +1,8 @@
 <script>
+	import { inject } from '@vercel/analytics';
 	import './styles.css';
+
+	inject();
 </script>
 
 <div class="app">
