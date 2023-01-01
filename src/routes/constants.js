@@ -1,0 +1,10 @@
+export let p1_color = "rgba(255, 134,159,0.6)";
+export let p1_color_opaque = "rgba(255, 134,159,1.0)";
+export let p2_color = "rgba(98,  182, 239,0.6)";
+export let p2_color_opaque = "rgba(98,  182, 239,1.0)";
+export let p3_color = "rgba(255, 218, 128,0.6)";
+export let p3_color_opaque = 'rgba(255, 218, 128, 1)';
+export let green = 'rgba(68, 222, 40, 0.5)';
+export let blue = 'rgba(3, 88, 182, 0.6)';
+export let orange = 'rgba(244, 99, 0, 0.6)';
+export let red = 'rgba(214, 0, 0, 0.6)';
