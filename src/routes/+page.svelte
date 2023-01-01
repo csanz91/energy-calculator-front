@@ -43,7 +43,7 @@
 	<div>Primer dia de los datos: {first_day.toLocaleDateString()}</div>
 	<div>Ultimo dia de los datos: {last_day.toLocaleDateString()}</div>
 	<div>Numero de dias: {num_days}</div>
-	<div>Precio medio compensacion de gas de los ultimos 30 dias: {energyData.rd_10_mean_price} €</div>
+	<div>Precio medio compensacion de gas de los ultimos 30 dias: {energyData.rd_10_mean_price.toFixed(4)} €</div>
 
 	<ConsumptionBars {consumption_p1} {consumption_p2} {consumption_p3} labels={months_labels} />
 	<Chart
