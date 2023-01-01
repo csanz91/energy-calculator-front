@@ -28,7 +28,7 @@
 	}
 </script>
 
-<form bind:this={wrapper} action="http://localhost:8000/file-upload" class="dropzone">
+<form bind:this={wrapper} action="https://api.calc.cesarsanz.dev/file-upload" class="dropzone">
 	<div>
 		<label for="contracted_p1">Potencia contratada periodo P1 (kW):</label>
 		<input
