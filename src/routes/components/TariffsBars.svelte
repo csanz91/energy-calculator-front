@@ -22,9 +22,10 @@
 	};
 	function colorize() {
 		return (context) => {
-			let cost_diff = context.dataset.cost_diff[context.dataIndex];
-			const c = cost_diff < 2 ? green : cost_diff < 5 ? blue : cost_diff < 10 ? orange : red;
-			return c;
+			const min_cost = context.dataset.data[0];
+			const cost = context.parsed.y;
+			const percentage = ((cost - min_cost) / ((cost + min_cost) / 2)) * 100;
+			return percentage < 2 ? green : percentage < 5 ? blue : percentage < 10 ? orange : red;
 		};
 	}
 </script>
