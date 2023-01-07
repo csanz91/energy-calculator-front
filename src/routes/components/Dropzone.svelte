@@ -23,6 +23,7 @@
 	});
 	function calculateEnergy() {
 		if (myDropzone) {
+			energyData = null;
 			myDropzone.processQueue();
 		}
 	}
