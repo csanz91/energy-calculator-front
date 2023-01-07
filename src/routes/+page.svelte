@@ -4,8 +4,12 @@
 	import TariffsBars from './components/TariffsBars.svelte';
 	// import { energyData } from './data.js';
 	import Chart from './components/Chart.svelte';
+	import Tariffs from './components/Tariffs.svelte';
+
+	export let data;
 
 	let energyData;
+	let tariffsVisible = false;
 
 	const getMonthlyConsumption = (energyData, periodIdx) =>
 		energyData
@@ -37,13 +41,23 @@
 <div class="data-selection">
 	<h1>Calculadora</h1>
 	<Dropzone bind:energyData />
+	<button on:click={() => (tariffsVisible = !tariffsVisible)}>Mostrar tarifas</button>
 </div>
+
+{#if tariffsVisible}
+	<Tariffs tariffsData={data.tariffsData} />
+{/if}
+
 {#if energyData}
 	<p />
 	<div>Primer dia de los datos: {first_day.toLocaleDateString()}</div>
 	<div>Ultimo dia de los datos: {last_day.toLocaleDateString()}</div>
 	<div>Numero de dias: {num_days}</div>
-	<div>Precio medio compensacion de gas de los ultimos 30 dias: {energyData.rd_10_mean_price.toFixed(4)} €</div>
+	<div>
+		Precio medio compensacion de gas de los ultimos 30 dias: {energyData.rd_10_mean_price.toFixed(
+			4
+		)} €
+	</div>
 
 	<ConsumptionBars {consumption_p1} {consumption_p2} {consumption_p3} labels={months_labels} />
 	<Chart
